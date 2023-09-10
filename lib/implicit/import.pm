@@ -79,8 +79,6 @@ sub unimport {
 
         $replacement = "BEGIN { $replacement }" . $+{end_of_statement};
 
-        say "Translate:\n  from: $statement\n    to: $replacement\n";
-
         substr($$ref, 0, 0) = $replacement;
 
         return;
